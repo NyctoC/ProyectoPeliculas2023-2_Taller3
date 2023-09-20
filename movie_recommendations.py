@@ -4,6 +4,7 @@ import os
 import openai
 from openai.embeddings_utils import get_embedding, cosine_similarity
 import numpy as np
+import matplotlib
 
 _ = load_dotenv('openAI.env')
 openai.api_key  = os.environ['openAI_api_key']
@@ -56,5 +57,3 @@ for i in range(len(movies)):
 sim = np.array(sim)
 idx = np.argmax(sim)
 print(movies[idx]['title'])
-
-
