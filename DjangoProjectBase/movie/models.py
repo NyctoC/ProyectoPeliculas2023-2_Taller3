@@ -15,7 +15,7 @@ class Movie(models.Model):
   url = models.URLField(blank=True)
 
   def __str__(self):
-    return self.text
+    return self.title
 
 class Review(models.Model):
   text = models.CharField(max_length=100)
